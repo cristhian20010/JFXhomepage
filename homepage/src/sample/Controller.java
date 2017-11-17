@@ -1,6 +1,5 @@
 package sample;
 
-import com.sun.prism.Image;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
@@ -26,12 +25,12 @@ public class Controller  implements Initializable{
 
         opacityPane.setVisible(false);
 
-        FadeTransition fadeTransition=new FadeTransition(Duration.seconds(0.5),opacityPane);
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(0.5),opacityPane);
         fadeTransition.setFromValue(1);
         fadeTransition.setToValue(0);
         fadeTransition.play();
 
-        TranslateTransition translateTransition=new TranslateTransition(Duration.seconds(0.5),drawerPane);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(0.5),drawerPane);
         translateTransition.setByX(-600);
         translateTransition.play();
 
@@ -45,16 +44,14 @@ public class Controller  implements Initializable{
 
 
         drawerImage.setOnMouseClicked(event -> {
-
-
             opacityPane.setVisible(true);
 
-            FadeTransition fadeTransition1=new FadeTransition(Duration.seconds(0.5),opacityPane);
+            FadeTransition fadeTransition1 = new FadeTransition(Duration.seconds(0.5),opacityPane);
             fadeTransition1.setFromValue(0);
             fadeTransition1.setToValue(0.15);
             fadeTransition1.play();
 
-            TranslateTransition translateTransition1=new TranslateTransition(Duration.seconds(0.5),drawerPane);
+            TranslateTransition translateTransition1 = new TranslateTransition(Duration.seconds(0.5),drawerPane);
             translateTransition1.setByX(+600);
             translateTransition1.play();
         });
@@ -63,7 +60,7 @@ public class Controller  implements Initializable{
 
 
 
-            FadeTransition fadeTransition1=new FadeTransition(Duration.seconds(0.5),opacityPane);
+            FadeTransition fadeTransition1 = new FadeTransition(Duration.seconds(0.5),opacityPane);
             fadeTransition1.setFromValue(0.15);
             fadeTransition1.setToValue(0);
             fadeTransition1.play();
@@ -73,7 +70,7 @@ public class Controller  implements Initializable{
             });
 
 
-            TranslateTransition translateTransition1=new TranslateTransition(Duration.seconds(0.5),drawerPane);
+            TranslateTransition translateTransition1 = new TranslateTransition(Duration.seconds(0.5),drawerPane);
             translateTransition1.setByX(-600);
             translateTransition1.play();
         });
@@ -83,34 +80,34 @@ public class Controller  implements Initializable{
     public  void  Animation(){
 
 
-        FadeTransition fadeTransition=new FadeTransition(Duration.seconds(3),pane4);
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(3),pane4);
         fadeTransition.setFromValue(1);
         fadeTransition.setToValue(0);
         fadeTransition.play();
 
         fadeTransition.setOnFinished(event -> {
-            FadeTransition fadeTransition1=new FadeTransition(Duration.seconds(3),pane3);
+            FadeTransition fadeTransition1 = new FadeTransition(Duration.seconds(3),pane3);
             fadeTransition1.setFromValue(1);
             fadeTransition1.setToValue(0);
             fadeTransition1.play();
 
             fadeTransition1.setOnFinished(event1 -> {
 
-                FadeTransition fadeTransition2=new FadeTransition(Duration.seconds(3),pane2);
+                FadeTransition fadeTransition2 = new FadeTransition(Duration.seconds(3),pane2);
                 fadeTransition2.setFromValue(1);
                 fadeTransition2.setToValue(0);
                 fadeTransition2.play();
 
                 fadeTransition2.setOnFinished(event2 -> {
 
-                    FadeTransition fadeTransition00=new FadeTransition(Duration.seconds(3),pane2);
+                    FadeTransition fadeTransition00 = new FadeTransition(Duration.seconds(3),pane2);
                     fadeTransition00.setFromValue(0);
                     fadeTransition00.setToValue(1);
                     fadeTransition00.play();
 
 
                     fadeTransition00.setOnFinished(event3 -> {
-                        FadeTransition fadeTransition11=new FadeTransition(Duration.seconds(3),pane3);
+                        FadeTransition fadeTransition11 = new FadeTransition(Duration.seconds(3),pane3);
                         fadeTransition11.setFromValue(0);
                         fadeTransition11.setToValue(1);
                         fadeTransition11.play();
